@@ -1,0 +1,146 @@
+body {
+  min-width: 340px;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: black;
+  padding: var(--spacing-medium) var(--spacing-large);
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+}
+
+.navbar__logo-container {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__logo {
+  width: 400px;
+}
+
+/* Link Styles */
+.navbar__links-container {
+  flex-grow: 1;
+  display: flex; /**/
+  justify-content: flex-end; /**/
+}
+
+.navbar__links {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xlarge);
+}
+
+.navbar__links a {
+  color: inherit;
+  font-size: var(--font-size-xsmall);
+}
+
+.navbar__links a:hover {
+  color: var(--tertiary-color);
+}
+
+.navbar__link-active {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.navbar__link-active:hover {
+  border-bottom: 1px solid var(--hover-color);
+}
+
+/* Styles for toggle button (hamburgermeny) */
+.navbar__toggle-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+}
+
+.navbar__toggle-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.navbar__toggle-logo {
+  visibility: hidden;
+  display: block;
+  color: var(--text-color);
+}
+
+.navbar__toggle-logo:hover {
+  color: var(--hover-color);
+}
+
+/* Break Point Tablet: 840px */
+@media screen and (max-width: 840px) {
+  .navbar__logo-container {
+    width: 200px;
+    height: 80px;
+  }
+
+  .navbar__logo {
+    width: 200px;
+  }
+}
+
+/* Break Point Tablet: 768px */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-logo {
+    visibility: visible;
+  }
+
+  .navbar__logo-container {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar__logo {
+    width: 200px;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    width: 85%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s ease-in-out;
+    background-color: var(--background-color);
+    z-index: 999;
+  }
+
+  .navbar__links-active {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .navbar__links {
+    width: 100%;
+  }
+}

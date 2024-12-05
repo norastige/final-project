@@ -7,15 +7,18 @@
   --spacing-xlarge: 3rem;
   --spacing-2xlarge: 4rem;
   /* Color */
-  /* --background-color: #000000;
-  --text-color: #000000;
-  --button-color: #000000;
-  --primary-color: #000000;
-  --secondary-color: #000000;
-  --tertiary-color: #000000; */
+  --background-color: #ffffff;
+  --text-color: #422b1c;
+  --hover-color: #bbd2e0;
+  --button-color: #422b1c;
+  --primary-color: #d6edfa;
+  --secondary-color: #bbd2e0;
+  --tertiary-color: #94b1c2;
   /* Font Size */
-  /* --font-size-small: 1rem;
+  --font-size-2xsmall: 0.5rem;
+  --font-size-xsmall: 1rem;
+  --font-size-small: 1.5rem;
   --font-size-medium: 2rem;
   --font-size-large: 4rem;
-  --font-size-xlarge: 5rem; */
+  --font-size-xlarge: 5rem;
 }
