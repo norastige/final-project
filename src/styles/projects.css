@@ -9,6 +9,21 @@ body {
   flex-direction: column;
 }
 
+.projects__section--functionality {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.search-input {
+  height: 40px;
+  width: 200px;
+  padding: var(--spacing-small);
+  border: 2px solid black;
+}
+
 .projects__section-header {
   font-size: var(--font-size-header);
   line-height: var(--spacing-xlarge);

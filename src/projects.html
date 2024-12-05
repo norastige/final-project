@@ -46,20 +46,25 @@
       <!--Projects with Filter and Search-->
       <div class="projects-section">
         <h1 class="projects__section-header">PROJECTS.</h1>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search projects..."
-          class="search-input"
-        />
-        <div class="projects-filter">
-          <button class="filter-link filter-active" data-filter="all">
-            All Projects
-          </button>
-          <button class="filter-link" data-filter="newest">Newest</button>
-          <button class="filter-link" data-filter="oldest">Oldest</button>
+        <div class="projects__section--functionality">
+         <div class="projects-filter">
+            <button class="filter-link filter-active" data-filter="all">
+              All Projects
+            </button>
+            <button class="filter-link" data-filter="newest">Newest</button>
+            <button class="filter-link" data-filter="oldest">Oldest</button>
+          </div>
+          
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search projects..."
+            class="search-input"
+          />
         </div>
+        
         <div class="projects-container"></div>
+        </div>
       </div>
     </main>
     <footer>
