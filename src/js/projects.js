@@ -6,7 +6,7 @@ const projects = [
     date: "2024-01-01",
     description: "Lorem ipsum dolor",
     image: "./assets/images/Lemstove/modell-1.jpeg",
-    link: "romforvenner.html",
+    link: "../lemstove.html",
   },
   {
     id: 2,
