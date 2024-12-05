@@ -37,6 +37,7 @@ const projects = [
 // Select Elements
 const filterLinks = document.querySelectorAll(".filter-link");
 const projectsContainer = document.querySelector(".projects-container");
+const searchInput = document.querySelector(".search-input");
 
 // Showing the projects
 function renderProjects(filteredProjects) {
@@ -58,18 +59,59 @@ function renderProjects(filteredProjects) {
   });
 }
 
-// Filter and sort
-function filterProjects(filter) {
+// // Filter and sort
+// function filterProjects(filter) {
+//   let filteredProjects = [...projects];
+
+//   if (filter === "newest") {
+//     filteredProjects.sort((a, b) => new Date(b.date) - new Date(a.date));
+//   } else if (filter === "oldest") {
+//     filteredProjects.sort((a, b) => new Date(a.date) - new Date(b.date));
+//   }
+
+//   // Search
+//   if (searchTerm) {
+//     filteredProjects = filteredProjects.filter(
+//       (project) =>
+//         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//         project.description.toLowerCase().includes(searchTerm.toLowerCase())
+//     );
+//   }
+
+//   renderProjects(filteredProjects);
+// }
+
+// Combining filter and search
+function filterAndSearchProjects(filter, searchTerm) {
   let filteredProjects = [...projects];
 
+  // Filter based on selected filter
   if (filter === "newest") {
     filteredProjects.sort((a, b) => new Date(b.date) - new Date(a.date));
   } else if (filter === "oldest") {
     filteredProjects.sort((a, b) => new Date(a.date) - new Date(b.date));
   }
 
+  // Filter based on search term
+  if (searchTerm) {
+    filteredProjects = filteredProjects.filter(
+      (project) =>
+        project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
+
   renderProjects(filteredProjects);
 }
+
+// Event Listeners for Search input
+searchInput.addEventListener("input", () => {
+  const searchTerm = searchInput.value.trim();
+  const activeFilter = document
+    .querySelector(".filter-active")
+    .getAttribute("data-filter");
+  filterAndSearchProjects(activeFilter, searchTerm);
+});
 
 // Event Listeners for filter-links
 filterLinks.forEach((link) => {
@@ -82,7 +124,9 @@ filterLinks.forEach((link) => {
 
     // Filter based on selected filter link
     const filter = e.target.getAttribute("data-filter");
-    filterProjects(filter);
+    const searchTerm = searchInput.value.trim();
+    filterAndSearchProjects(filter, searchTerm);
+    // filterProjects(filter);
   });
 });
 

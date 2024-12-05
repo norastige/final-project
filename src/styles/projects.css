@@ -80,12 +80,10 @@ body {
   cursor: pointer;
 }
 
-.project-card h3 a{
-    color: black;
+.project-card h3 a {
+  color: black;
 }
 
 .project-card p {
   font-size: var(--font-size-xsmall);
-} */
-
-/* Make sure <a> tag around the card behaves like a block element
+}
