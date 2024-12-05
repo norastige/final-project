@@ -4,25 +4,33 @@ const projects = [
     id: 1,
     title: "Lemstove",
     date: "2024-01-01",
+    description: "Lorem ipsum dolor",
     image: "./assets/images/Lemstove/modell-1.jpeg",
+    link: "romforvenner.html",
   },
   {
     id: 2,
     title: "Rom For Venner",
     date: "2023-12-15",
+    description: "Lorem ipsum dolor",
     image: "./assets/images/RomForVenner/Interiør7.jpeg",
+    link: "lemstove.html",
   },
   {
     id: 3,
     title: "Project C",
     date: "2023-11-20",
+    description: "Lorem ipsum dolor",
     image: "./assets/images/RomForVenner/Eksteriør2.jpeg",
+    link: "prosjekt3.html",
   },
   {
     id: 4,
     title: "Project D",
     date: "2023-10-05",
+    description: "Lorem ipsum dolor",
     image: "./assets/images/RomForVenner/Eksteriør3.jpeg",
+    link: "prosjekt4.html",
   },
 ];
 
@@ -42,7 +50,8 @@ function renderProjects(filteredProjects) {
     // Adding the images with innerHTML
     projectCard.innerHTML = `
       <img src="${project.image}" alt="${project.title}" class="project-image" />
-      <h3>${project.title}</h3>
+      <h3><a href=${project.link}">${project.title}</a></h3>
+      <p>${project.description}</p>
     `;
 
     projectsContainer.appendChild(projectCard);
