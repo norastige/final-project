@@ -15,7 +15,8 @@
   --secondary-color: #bbd2e0;
   --tertiary-color: #94b1c2;
   /* Font Size */
-  --font-size-2xsmall: 0.5rem;
+  --font-size-3xsmall: 0.5rem;
+  --font-size-2xsmall: 0.8rem;
   --font-size-xsmall: 1rem;
   --font-size-small: 1.5rem;
   --font-size-medium: 2rem;

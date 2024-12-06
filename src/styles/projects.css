@@ -102,3 +102,133 @@ body {
 .project-card p {
   font-size: var(--font-size-xsmall);
 }
+
+/* Media Queries */
+/* Break Point Small Tablet: 580px */
+@media screen and (max-width: 580px) {
+  .navbar__links {
+    width: 75%;
+  }
+
+  footer img {
+    max-width: 80px;
+  }
+
+  .filter-link {
+    font-size: var(--font-size-2xsmall);
+  }
+  .projects-container {
+    height: 1050px;
+  }
+
+  .project-card {
+    height: 500px;
+  }
+
+  .project-image {
+    height: 400px;
+  }
+}
+
+/* Break Point Large Phone: 425px */
+@media screen and (max-width: 425px) {
+  .navbar__links {
+    width: 75%;
+  }
+
+  footer img {
+    max-width: 80px;
+  }
+
+  .projects-section {
+    padding: var(--spacing-medium);
+  }
+
+  .projects__section--functionality {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .search-input {
+    width: 140px;
+  }
+
+  .projects__section-header {
+    font-size: var(--font-size-medium);
+    line-height: var(--spacing-small);
+    width: 100%;
+    padding-top: var(--spacing-medium);
+    padding-bottom: var(--spacing-medium);
+  }
+
+  .projects-filter {
+    gap: var(--spacing-small);
+    width: 50%;
+  }
+
+  .projects-container {
+    height: 750px;
+  }
+
+  .project-card {
+    height: 350px;
+  }
+
+  .project-image {
+    height: 250px;
+  }
+
+  .project-card h3 {
+    font-size: var(--font-size-xsmall);
+  }
+
+  .project-card p {
+    font-size: var(--font-size-2xsmall);
+  }
+}
+
+/* Break Point Medium Phone: 375px */
+@media screen and (max-width: 375px) {
+  .search-input {
+    width: 140px;
+  }
+
+  .filter-link {
+    font-size: var(--font-size-3xsmall);
+  }
+}
+
+/* Break Point Small Phone: 320px */
+@media screen and (max-width: 320px) {
+  .projects-filter {
+    gap: var(--spacing-xsmall);
+  }
+
+  .filter-link {
+    line-height: var(--spacing-small);
+    text-align: left;
+  }
+
+  .projects-container {
+    height: 530px;
+  }
+
+  .project-card {
+    height: 250px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-card h3 {
+    font-size: var(--font-size-2xsmall);
+  }
+
+  .project-card p {
+    font-size: var(--font-size-3xsmall);
+  }
+}

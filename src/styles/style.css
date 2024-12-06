@@ -329,6 +329,10 @@ footer img {
 
 /* Break Point Large Phone: 425px */
 @media screen and (max-width: 425px) {
+  .navbar {
+    padding: var(--spacing-xsmall) var(--spacing-medium);
+  }
+
   .artist__statement-container {
     width: 100%;
     height: 250px;
