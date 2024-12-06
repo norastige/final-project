@@ -6,7 +6,7 @@ const projects = [
     date: "2024-01-01",
     description: "Lorem ipsum dolor",
     image: "./assets/images/Lemstove/modell-1.jpeg",
-    link: "../lemstove.html",
+    link: "lemstove.html",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const projects = [
     date: "2023-12-15",
     description: "Lorem ipsum dolor",
     image: "./assets/images/RomForVenner/Interiør7.jpeg",
-    link: "lemstove.html",
+    link: "romforvenner.html",
   },
   {
     id: 3,
@@ -47,13 +47,24 @@ function renderProjects(filteredProjects) {
     //Creating Elements
     const projectCard = document.createElement("div");
     projectCard.classList.add("project-card");
+    const image = document.createElement("img");
+    image.src = project.image;
+    image.alt = project.title;
+    image.classList.add("project-image");
 
-    // Adding the images with innerHTML
-    projectCard.innerHTML = `
-      <img src="${project.image}" alt="${project.title}" class="project-image" />
-      <h3><a href=${project.link}">${project.title}</a></h3>
-      <p>${project.description}</p>
-    `;
+    const title = document.createElement("h3");
+    const link = document.createElement("a");
+    link.href = project.link;
+    link.textContent = project.title;
+    title.appendChild(link);
+
+    const description = document.createElement("p");
+    description.textContent = project.description;
+
+    // Adding elements to card
+    projectCard.appendChild(image);
+    projectCard.appendChild(title);
+    projectCard.appendChild(description);
 
     projectsContainer.appendChild(projectCard);
   });
