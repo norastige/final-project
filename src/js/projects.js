@@ -18,19 +18,19 @@ const projects = [
   },
   {
     id: 3,
-    title: "Project C",
+    title: "Klimakammer",
     date: "2023-11-20",
     description: "Lorem ipsum dolor",
     image: "./assets/images/RomForVenner/Eksteriør2.jpeg",
-    link: "prosjekt3.html",
+    link: "klimakammer.html",
   },
   {
     id: 4,
-    title: "Project D",
+    title: "Project 4",
     date: "2023-10-05",
     description: "Lorem ipsum dolor",
     image: "./assets/images/RomForVenner/Eksteriør3.jpeg",
-    link: "prosjekt4.html",
+    link: "project4.html",
   },
 ];
 

@@ -58,11 +58,7 @@ slidePictrue.forEach((slide, index) => {
   imageElement.src = slide.image;
   imageElement.alt = `lysbilde ${index + 1}`;
 
-  const descriptionElement = document.createElement("p");
-  descriptionElement.textContent = slide.description;
-
   slideElement.appendChild(imageElement);
-  slideElement.appendChild(descriptionElement);
 
   slideContainer.appendChild(slideElement);
 
@@ -108,11 +104,6 @@ function goToSlide(index) {
   updateCounter(index, slides.length);
 }
 
-function updateCounter(current, total) {
-  const counter = document.querySelector(".counter");
-  counter.textContent = `Bilde ${current + 1} av ${total}`;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
   const dots = document.querySelectorAll(".dot");
@@ -125,5 +116,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 previousButton.addEventListener("click", () => changeSlide(-1));
-
 nextButton.addEventListener("click", () => changeSlide(+1));
