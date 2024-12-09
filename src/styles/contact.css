@@ -1,0 +1,66 @@
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.contact__form-container {
+  width: 100%;
+  height: 700px;
+  padding: var(--spacing-medium);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-2xlarge);
+}
+
+.form__input-container {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form__input-container h1 {
+  font-size: var(--font-size-header);
+  line-height: var(--spacing-2xlarge);
+}
+
+.contact__picture-container {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  align-items: end;
+}
+
+.contact__image {
+  max-width: 100%;
+}
+
+.form__input {
+  height: 40px;
+  width: 400px;
+  padding: var(--spacing-small);
+  border: 2px solid black;
+}
+
+.form__message-input {
+  height: 100px;
+  width: 400px;
+  padding: var(--spacing-small);
+  border: 2px solid black;
+}
+
+.form__send-button {
+  height: 40px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form__send-button:hover {
+  border-color: var(--hover-color);
+  color: var(--hover-color);
+}
