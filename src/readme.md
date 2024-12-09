@@ -52,10 +52,10 @@ other organization.
 
 ## Resoruces.
 
-    - I got valuable insight through workshops in class, W3 Schhols.
+    - I got valuable insight through workshops and notes from class, W3 Schhols.
     - Open AI: searching for typos, explanation of difficult concepts.
 
 ## Links
 
-    - GitHub Repository:
+    - GitHub Repository: https://github.com/norastige/final-project.git
     - Netlify Deployment:
